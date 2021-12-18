@@ -2,7 +2,7 @@
 
 * A clone is an object copy 
 * The the Object class has a *clone()* method which  is used to create a clone of the object
-* However, to use java object clone() method, we have to implement the marker interface **java.lang.Cloneable**so that it won’t throw **CloneNotSupportedException** at runtime
+* However, to use java object clone() method, we have to implement the marker interface **java.lang.Cloneable** so that it won’t throw **CloneNotSupportedException** at runtime
 
 * Classes designed for inheritance should not implement cloneable
 
