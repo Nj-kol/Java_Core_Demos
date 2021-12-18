@@ -4,15 +4,15 @@ public class Demo {
 
 	public static void main(String[] args) {
 		
-		CloneExample ce = new CloneExample();
+		CloneUsingSerialization ce = new CloneUsingSerialization();
 		ce.setNum(3);
 		ce.setThing(new Thing("Fred"));
 		
 		System.out.println("Before cloning");
 		System.out.println("ce:" + ce);
 
-		CloneExample ceShallowClone = ce.clone();
-		CloneExample cdDeepClone = ce.deepClone();
+		CloneUsingSerialization ceShallowClone = ce.clone();
+		CloneUsingSerialization cdDeepClone = ce.deepClone();
 
 		System.out.println("\nAfter cloning, setting ce num to 5");
 		ce.setNum(5);

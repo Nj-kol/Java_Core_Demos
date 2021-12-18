@@ -8,14 +8,14 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 @SuppressWarnings("serial")
-public class CloneExample implements Cloneable, Serializable {
+public class CloneUsingSerialization implements Cloneable, Serializable {
 
 	int num;
 	Thing thing;
 
-	public CloneExample clone() {
+	public CloneUsingSerialization clone() {
 		try {
-			return (CloneExample) super.clone();
+			return (CloneUsingSerialization) super.clone();
 		} catch (CloneNotSupportedException e) {
 			return null;
 		}
@@ -24,7 +24,7 @@ public class CloneExample implements Cloneable, Serializable {
 	/**
 	 * Deep copy using serialization
 	 */
-	public CloneExample deepClone() {
+	public CloneUsingSerialization deepClone() {
 		try {
 			ByteArrayOutputStream baos = new ByteArrayOutputStream();
 			ObjectOutputStream oos = new ObjectOutputStream(baos);
@@ -32,7 +32,7 @@ public class CloneExample implements Cloneable, Serializable {
 
 			ByteArrayInputStream bais = new ByteArrayInputStream(baos.toByteArray());
 			ObjectInputStream ois = new ObjectInputStream(bais);
-			return (CloneExample) ois.readObject();
+			return (CloneUsingSerialization) ois.readObject();
 		} catch (IOException e) {
 			return null;
 		} catch (ClassNotFoundException e) {
