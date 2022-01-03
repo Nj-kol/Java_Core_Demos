@@ -51,6 +51,6 @@ public class Employee {
 
 	@Override
 	public String toString() {
-		return "\n[" + this.id + "," + this.firstName + "," + this.lastName + "," + this.age + "]";
+		return "[" + this.id + "," + this.firstName + "," + this.lastName + "," + this.age + "]";
 	}
 }

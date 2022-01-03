@@ -123,7 +123,7 @@ class TestCompartors {
 		// Parallel sorting
 		Arrays.parallelSort(employeesArray, groupByComparator);
 
-		System.out.println(employeesArray);
+		System.out.println(Arrays.toString(employeesArray));
 	}
 
 	@Test
@@ -137,9 +137,7 @@ class TestCompartors {
 
 		Arrays.sort(employeesArrayWithNulls, employeeNameComparator_nullFirst);
 
-		for (Employee element : employeesArrayWithNulls) {
-			System.out.println(element);
-		}
+		System.out.println(Arrays.toString(employeesArrayWithNulls));
 	}
 
 	@Test
@@ -153,8 +151,6 @@ class TestCompartors {
 
 		Arrays.sort(employeesArrayWithNulls, employeeNameComparator_nullLast);
 
-		for (Employee element : employeesArrayWithNulls) {
-			System.out.println(element);
-		}
+		System.out.println(Arrays.toString(employeesArrayWithNulls));
 	}
 }
