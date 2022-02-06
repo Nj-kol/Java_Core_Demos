@@ -1,4 +1,4 @@
-package com.njkol.java8;
+package com.njkol.streams;
 
 import java.util.ArrayList;
 import java.util.Optional;
